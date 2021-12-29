@@ -23,7 +23,7 @@ jobs:
           python -m pip install -r ./jupyter/requirements.txt
       - name: Build jupyter lite
         run: |
-          cp README.md content
+          cp README.md ./jupyter
           jupyter lite build --lite-dir ./jupyter --output-dir ./jupyter/.out
       - name: Upload dist
         uses: actions/upload-artifact@v2
